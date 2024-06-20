@@ -1,6 +1,9 @@
+# This is Blackjack game
+
 import random
 import variable
 
+# This function adjusts the value of Ace card to 1 if it is greater than 11
 def lookup(lst):
     adjusted_lst = []
     for x in lst:
@@ -10,6 +13,7 @@ def lookup(lst):
             adjusted_lst.append(x)
     return adjusted_lst
 
+# This function ends the game
 def end():
     print("Do you want to play again? Type 'y' or 'n'")
     while True:
@@ -21,7 +25,7 @@ def end():
             break
 
 
-
+# This function starts the game
 def game():
     ucard = [random.choice(variable.card), random.choice(variable.card)]
     ccard = [random.choice(variable.card)]
