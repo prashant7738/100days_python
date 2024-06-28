@@ -12,13 +12,19 @@ class Snake:
 
     def create_snake(self):
         for cord in starting_pos:
-            mb = Turtle("square")
-            mb.color("white")
-            mb.penup()
-            mb.goto(cord)
-            self.segment.append(mb)
+            self.add_segment(cord)
+            
 
+    def add_segment(self, position):
+        mb = Turtle("square")
+        mb.color("white")
+        mb.penup()
+        mb.goto(position)
+        self.segment.append(mb)
 
+    def extend(self):
+         self.add_segment(self.segment[-1].position())
+        
 
     def move(self):
         for i in range(len(self.segment)-1 , 0 , -1):
