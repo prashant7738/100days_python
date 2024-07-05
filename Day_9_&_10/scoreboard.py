@@ -7,20 +7,30 @@ class Score(Turtle):
         super().__init__()
         self.hideturtle()
         self.score = 0
+        self.high_score = 0
         self.shape("square")
         self.shapesize(stretch_len=10, stretch_wid=1, outline=2)
         self.goto(0,260)
-        self.color("blue")
+        self.color("Pink")
         # self.penup()
         self.update_score()
 
 
-    def game_over(self):
-        self.goto(0,0)
-        self.write("GAME OVER", align="center", font=("Arial", 20, "normal"))
-
     def update_score(self):
         self.clear()
+        with open("data.txt" , mode = "r") as file:
+            h_score = file.read()
+        self.write(f"Score: {self.score}    High Score:  {h_score}", align="center", font=("Arial", 20, "normal"))
         
-        self.write(f"Score: {self.score}", align="center", font=("Arial", 20, "normal"))
-        self.score += 1
+        
+    def reset(self):
+        if self.score > self.high_score:
+            self.high_score = self.score
+            with open("data.txt", mode="w") as h_score:
+                h_score.write(f"{self.score}")
+        self.score = 0
+        self.update_score()
+        
+    def increase_point(self):
+        self.score += 1 
+        self.update_score()
