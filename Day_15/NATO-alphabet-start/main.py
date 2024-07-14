@@ -7,10 +7,17 @@ data_frame = pd.DataFrame(data)
 dict = {rows.letter : rows.code for (index ,rows) in data_frame.iterrows()}
 # print(dict)
 
-word = input("Enter a word : ").upper()
-list_of_letter = [letter for letter in word]
-# print(list_of_letter)
 
-new_list = [dict[letter] for letter in list_of_letter]
+def generate_phonetic():
+    word = input("Enter a word : ").upper()
+    try:
+        new_list = [dict[letter] for letter in word]
+        
+    except KeyError:
+        print("Sorry we only take alphabets ")
+        generate_phonetic()
 
-print(new_list)
+    else:
+        print(new_list)
+
+generate_phonetic()
