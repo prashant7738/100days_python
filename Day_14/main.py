@@ -20,5 +20,10 @@ print(f''' The highest temperature was in {data[data.temp == data.temp.max()].da
 
 # #  TO CONVERT DATA FRAME INTO DICTIONARY
 
+# convert dataframe to dictionary
+data_dict = data.to_dict('records')
+print(data_dict)
+
+
 # data_dict = data_frame.to_dict()
 # print(data_dict)

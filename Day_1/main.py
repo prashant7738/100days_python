@@ -38,5 +38,3 @@ while(result is False):
     if lives == 0:
         result = True
         print("You lose")
-
-

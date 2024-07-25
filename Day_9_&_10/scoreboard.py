@@ -18,16 +18,24 @@ class Score(Turtle):
 
     def update_score(self):
         self.clear()
-        with open("data.txt" , mode = "r") as file:
-            h_score = file.read()
+        try:
+            with open("data.txt" , mode = "r") as f:
+                h_score = f.read()
+
+        except FileNotFoundError:
+            with open("data.txt" , mode = "w") as f:
+                f.write("0")
+            with open("data.txt" , mode = "r") as f:
+                h_score = f.read()
+
         self.write(f"Score: {self.score}    High Score:  {h_score}", align="center", font=("Arial", 20, "normal"))
         
         
     def reset(self):
         if self.score > self.high_score:
             self.high_score = self.score
-            with open("data.txt", mode="w") as h_score:
-                h_score.write(f"{self.score}")
+            with open("data.txt", mode="w") as f:
+                f.write(str(self.score))
         self.score = 0
         self.update_score()
         

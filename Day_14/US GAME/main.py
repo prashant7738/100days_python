@@ -7,10 +7,10 @@ screen.setup(width = 800 , height = 600)
 map = Turtle()
 mb = Turtle()
 screen.title("US state game")
-screen.addshape("blank_states_img.gif")
-map.shape("blank_states_img.gif")
+screen.addshape("Day_14/US GAME/blank_states_img.gif")
+map.shape("Day_14/US GAME/blank_states_img.gif")
 
-data = pd.read_csv("50_states.csv")
+data = pd.read_csv("Day_14/US GAME/50_states.csv")
 # print(data.state)
 
 state_list = data.state.to_list()
