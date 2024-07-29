@@ -3,10 +3,11 @@
 import requests
 from datetime import datetime
 import time
-def is_iss_near():
-    MY_LAT =27.664400
-    MY_LON = 85.318794
+MY_LAT =27.664400
+MY_LON = 85.318794
 
+def is_iss_near():
+    
     response = requests.get(url="http://api.open-notify.org/iss-now.json")
     # To raise error we need to use following line of code
     response.raise_for_status()
@@ -23,12 +24,12 @@ def is_iss_near():
         return True
 
 def is_night():
-    # parameters = {
-    #     "lat": MY_LAT,
-    #     "long": MY_LON,
-    #     "formatted" : 0
-    # }
-    response = requests.get(url = "https://api.sunrise-sunset.org/json?lat=27.664400&lng=85.318794&formatted=0" )
+    parameters = {
+        "lat": MY_LAT,
+        "lng": MY_LON,
+        "formatted" : 0
+    }
+    response = requests.get(url = "https://api.sunrise-sunset.org/json" ,params= parameters )
     data = response.json()
     sunrise = int(data["results"]["sunrise"].split('T')[1].split(':')[0])
     sunset = int(data["results"]["sunset"].split('T')[1].split(':')[0])
