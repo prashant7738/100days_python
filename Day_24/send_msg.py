@@ -1,14 +1,14 @@
-from twilio.rest import Client
-import os
+# from twilio.rest import Client
+# import os
 
-account_sid = 'sid'
-auth_token = 'token'
-client = Client(account_sid, auth_token)
+# account_sid = 'sid'
+# auth_token = 'token'
+# client = Client(account_sid, auth_token)
 
-message = client.messages.create(
-  from_='number',
-  to='number',
-  body='Hello its me Prashant'
-)
+# message = client.messages.create(
+#   from_='number',
+#   to='number',
+#   body='Hello its me Prashant'
+# )
 
-print(message.sid)
+# print(message.sid)
