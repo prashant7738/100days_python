@@ -1,5 +1,4 @@
 # from twilio.rest import Client
-# import os
 
 # account_sid = 'sid'
 # auth_token = 'token'
