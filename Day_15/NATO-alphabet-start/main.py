@@ -1,6 +1,6 @@
 import pandas as pd
 
-data = pd.read_csv("nato_phonetic_alphabet.csv")
+data = pd.read_csv("NATO-alphabet-start/nato_phonetic_alphabet.csv")
 data_frame = pd.DataFrame(data)
 # print(data_frame)
 

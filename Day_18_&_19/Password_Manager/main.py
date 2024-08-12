@@ -87,7 +87,7 @@ def add_pass():
 window = Tk()
 window.config(padx=30 , pady=30)
 window.title("Password Manager")
-logo_img = PhotoImage(file = "logo.png")
+logo_img = PhotoImage(file = "Day_18_&_19/Password_Manager/logo.png")
 my_canvas = Canvas(height=200 , width= 200)
 my_canvas.create_image(100 ,100 , image = logo_img)
 my_canvas.grid(row = 0 , column= 1)
