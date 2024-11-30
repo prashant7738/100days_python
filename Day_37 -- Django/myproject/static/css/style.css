@@ -1,9 +1,17 @@
 main h1{
   text-align: center;
+  height: 40px;
+  width: 60px;
   color: beige;
   
 }
 
 a{
   background-color: brown;
+}
+
+nav{
+    width: 100px;
+    height: 30px;
+    background-color: blue;
 }

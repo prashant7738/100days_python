@@ -5,5 +5,17 @@
 {%endblock%}
 
 {%block content%}
-  <h1>This is the post</h1>
+  <section>
+    <h1>
+      Post List
+    </h1>
+    {% for post in posts%}
+      <article>
+        <h2>
+          <a href="{% url 'posts:page' slug=post.slug%}">{{ post.title }}</a></h2>
+        <p>{{ post.date }}</p>
+        <p>{{ post.body }}</p>
+      </article>
+    {% endfor %}
+  </section>
 {%endblock%}
