@@ -2,19 +2,19 @@ main h1{
   text-align: center;
   height: 40px;
   width: 600px;
-  color: beige;
+  color: rgb(0, 0, 0);
   
 }
 
 a{
   background-color: brown;
 }
-
+/* 
 nav{
     width: 800px;
     height: 800px;
     background-color: blue;
-}
+} */
 
 .banner{
   width: 100%;
