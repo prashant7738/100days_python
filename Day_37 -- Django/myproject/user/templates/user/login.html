@@ -1,0 +1,24 @@
+{%extends 'layout.html'%}
+
+{%block title%}
+  login UsER
+{%endblock%}
+
+{%block content%}
+
+    <h1>
+      Login user List
+    </h1>
+    <form action="/user/login/" method= "post">
+      {% csrf_token %}
+      {{form}}
+      {% if request.GET.next %}
+        <input type="hidden" name = "next" value = "{{request.GET.next}}">
+
+      {% endif %}
+      <button>Submit</button>
+    </form>
+
+
+
+{%endblock%}
