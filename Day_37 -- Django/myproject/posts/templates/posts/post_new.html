@@ -8,6 +8,12 @@
     <section>
         
         <h1>NEW POST</h1>
+
+        <form action="{% url 'posts:new-post' %}" method ="POST" enctype = "multipart/form-data">
+          {% csrf_token %}
+          {{ form }}
+          <button>Add Post</button>
+        </form>
     </section>
   
 

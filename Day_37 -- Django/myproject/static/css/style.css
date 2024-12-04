@@ -6,9 +6,6 @@ main h1{
   
 }
 
-a{
-  background-color: brown;
-}
 /* 
 nav{
     width: 800px;
@@ -23,4 +20,8 @@ nav{
 
 .contento{
     width: 800px;
+}
+
+a {
+  background-color: red;
 }
