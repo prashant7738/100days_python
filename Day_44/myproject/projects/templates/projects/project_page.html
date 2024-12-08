@@ -1,0 +1,16 @@
+{% extends 'layout.html'%}
+
+{% block title%}
+    The projects
+{%endblock%}
+{% block main%}
+    <h1>Here is all my projects</h1>
+    <section>
+    
+              <h2>{{ project.title}}</h2>
+                <p>{{ project.body}}</p>
+                <p>{{   project.date }}</p>
+                <img src="{{ project.image.url }}" alt="{{ project.title }}">
+
+    </section>
+{%endblock%}

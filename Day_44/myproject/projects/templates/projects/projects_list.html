@@ -6,10 +6,16 @@
 {% block main%}
     <h1>Here is all my projects</h1>
     <section>
- 
-        <ul>Project-1</ul>
-        <ul>Project-2</ul>
-        <ul>Project-3</ul>
+        {% for project in projects%}
+
+            <ul>
+                <a href="{% url 'projects:page' project.id%}"><h2>{{ project.title}}</h2></a>
+
+            </ul>
+
+        {% endfor%}
+       
+
 
     </section>
 {%endblock%}
